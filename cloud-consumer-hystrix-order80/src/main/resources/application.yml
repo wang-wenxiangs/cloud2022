@@ -1,0 +1,18 @@
+
+server:
+  port: 80
+
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+#spring-cloud依赖是这样<version>Brixton.RELEASE</version>   #版本号 使用这个
+#feign:
+#  hystrix:
+#    enabled: true
+
+#spring-cloud依赖是这样 <version>2020.0.2</version>   #版本号 使用这个
+feign:
+  circuitbreaker:
+    enabled: true
